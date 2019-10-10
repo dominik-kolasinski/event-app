@@ -1,0 +1,39 @@
+{
+  "name": "event-app",
+  "version": "1.0.0",
+  "description": "Event-app",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js --delay 1500ms",
+    "client": "npm start --prefix client",
+    "clientInstall": "npm install --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "test": "jest --forceExit --detectOpenHandles --maxWorkers=1 --config",
+    "testAll": "concurrently \"npm run test\" \"npm run test --prefix client\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "config": "^3.1.0",
+    "express": "^4.17.1",
+    "express-validator": "^5.3.1",
+    "jest": "^24.9.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.5.11",
+    "react-material-ui-form-validator": "^2.0.9"
+  },
+  "devDependencies": {
+    "@shelf/jest-mongodb": "^1.1.1",
+    "concurrently": "^4.1.0",
+    "nodemon": "^1.19.1",
+    "supertest": "^4.0.2"
+  },
+  "standard": {
+    "env": [
+      "jest"
+    ]
+  }
+}

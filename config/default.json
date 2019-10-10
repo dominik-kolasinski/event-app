@@ -1,0 +1,4 @@
+{
+  "mongoURI": "mongodb+srv://dkolasinski:dkolasinski123@event-app-bknbe.mongodb.net/test?retryWrites=true&w=majority",
+  "jwtSecret": "eventappsecret123"
+}
